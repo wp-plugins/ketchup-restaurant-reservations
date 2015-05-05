@@ -1,0 +1,231 @@
+
+@mixin reset {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+@mixin margin($top, $right, $bottom, $left){
+    margin-top: $top*$px;
+    margin-bottom: $bottom*$px;
+    margin-left: $left*$px;
+    margin-right: $right*$px;
+}
+
+@mixin border($color, $style, $width) {
+    border-width: list_to_string($width);
+    border-style: unquote($style);
+    border-color: unquote($color);
+}
+
+@mixin button( $button-color, $text-color: white ) {
+    background: $button-color;
+    border-color: darken( $button-color, 10% );
+    color: $text-color;
+    box-shadow: inset 0 1px 0 lighten( $button-color, 15% ), 0 1px 0 rgba(0,0,0,.15);
+
+    &:hover,
+        &:focus {
+        background: darken( $button-color, 5% );
+        border-color: darken( $button-color, 15% );
+        color: $text-color;
+        box-shadow: inset 0 1px 0 lighten( $button-color, 10% );
+    }
+
+    &:focus {
+        box-shadow: inset 0 1px 0 lighten( $button-color, 10% ),
+            0 0 0 1px #5b9dd9,
+            0 0 2px 1px rgba( 30, 140, 190, .8 );
+    }
+
+    &:active {
+        background: darken( $button-color, 10% );
+        border-color: darken( $button-color, 15% );
+        color: $text-color;
+        box-shadow: inset 0 2px 5px -3px rgba( 0, 0, 0, 0.5 ),
+            0 0 0 1px #5b9dd9,
+            0 0 2px 1px rgba( 30, 140, 190, .8 );
+    }
+
+    &[disabled],
+    &:disabled,
+        &.button-primary-disabled,
+        &.disabled {
+        color: hsl( hue( $button-color ), 10%, 80% ) !important;
+        background: darken( $button-color, 8% ) !important;
+        border-color: darken( $button-color, 15% ) !important;
+        text-shadow: none !important;
+    }
+}
+
+@mixin timeElementSupport {
+    div.time-spin-btn-container {
+        display: inline-block;
+        position: relative;
+        vertical-align: bottom;
+        margin: 0;
+        padding: 0; }
+
+    div.time-spin-btn {
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        border: 2px outset #CCCCCC;
+        background-color: #CCCCCC;
+        width: 1.2em; }
+
+    div.time-spin-btn-up {
+        border-bottom-width: 1px;
+        -moz-border-radius: 3px 3px 0px 0px;
+        -webkit-border-radius: 3px 3px 0px 0px;
+        border-radius: 3px 3px 0px 0px; }
+
+    div.time-spin-btn-up:before,
+        div.time-spin-btn-down:before {
+        content: "";
+        width: 0;
+        height: 0;
+        border-style: solid;
+        position: absolute;
+        left: 50%;
+        margin: -0.15em 0 0 -0.3em;
+        padding: 0; }
+
+    div.time-spin-btn-up:before {
+        border-width: 0 0.3em 0.3em 0.3em;
+        border-color: transparent transparent black transparent;
+        top: 25%; }
+
+    div.time-spin-btn-down {
+        border-top-width: 1px;
+        -moz-border-radius: 0px 0px 3px 3px;
+        -webkit-border-radius: 0px 0px 3px 3px;
+        border-radius: 0px 0px 3px 3px; }
+
+    div.time-spin-btn-down:before {
+        border-width: 0.3em 0.3em 0 0.3em;
+        border-color: black transparent transparent transparent;
+        top: 75%; }
+
+    div.time-spin-btn:hover {
+        cursor: pointer; }
+
+    div.time-spin-btn:active {
+        border: 2px inset #999999;
+        background-color: #999999; }
+
+    div.time-spin-btn-up:active:before {
+        border-color: transparent transparent white transparent;
+        top: 26%;
+        left: 51%; }
+
+    div.time-spin-btn-down:active:before {
+        border-color: white transparent transparent transparent;
+        top: 76%;
+        left: 51%; }
+}
+
+@mixin dateElementSupport {    
+    button.date-datepicker-button:after {
+        display: inline-block;
+        content: "";
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0.4em 0.4em 0em 0.4em;
+        border-color: black transparent transparent transparent;
+        margin: 0em 0em 0.2em 0.7em;
+        vertical-align: middle; }
+
+    .csstransitions div.date-calendar-dialog.date-closed {
+        -moz-transition: opacity 0.4s linear;
+        -webkit-transition: opacity 0.4s linear;
+        -o-transition: opacity 0.4s linear;
+        -ms-transition: opacity 0.4s linear;
+        transition: opacity 0.4s linear;
+        opacity: 0; }
+    .csstransitions div.date-calendar-dialog.date-open {
+        -moz-transition: opacity 0.4s linear;
+        -webkit-transition: opacity 0.4s linear;
+        -o-transition: opacity 0.4s linear;
+        -ms-transition: opacity 0.4s linear;
+        transition: opacity 0.4s linear;
+        opacity: 1; }
+}
+
+@mixin tablecover($base_size:50, $main_color: white, $secondary_color: #c80000) {
+    $secondary_color: transparentize($secondary_color,0.5);    
+
+    background-color:$main_color;
+    background-image: linear-gradient(90deg, #{$secondary_color} 50%, transparent 50%),
+    linear-gradient(#{$secondary_color} 50%, transparent 50%);
+    background-size:$base_size*$px $base_size*$px;
+    color: invert($main_color);
+}
+
+@mixin booking_buttons($parent_element,$buttons: 4, $colors : (green, red, blue, #a1007b) ){
+    @for $index from 1 to $buttons+1 {
+        #{$parent_element} button:nth-child(#{$index}) {
+            $current_color: nth($colors, $index);
+            &.highlighted {
+                box-shadow: 0 0 1px 1px #{$current_color};
+            }
+
+            &:hover, &:active, &:focus {
+                $current_color: nth($colors, $index);
+                color: $current_color;
+            }
+        }
+    }
+
+}
+
+@mixin animate-icon{
+    -webkit-animation: spin 2s infinite linear;
+    animation: spin 2s infinite linear;
+}
+@mixin selected {
+    outline: 2px solid $blue_royal;
+}
+
+@mixin reserved {
+    outline: 2px solid red;
+}
+
+@function list_to_string($list){
+    $string: '';
+    @each $item in $list {
+        $string: unquote($string) #{$item};
+    }
+    @return $string;
+}
+
+
+
+//Placeholders
+%common_meta_style {
+    position: relative;
+    display: inline-block;
+    padding: $phi*1rem;
+    margin-right: $phi*1rem;
+    margin-top: $phi*1rem;
+    @include border("#eeeeee", "solid", (1*$px));
+
+    .kechup-premium-deflactor {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: #FFF;
+        color: #555;
+        font-size: $font_size*$px;
+        left: 0;
+        top: 0;
+        content: " ";
+        z-index: 9999;
+        display: block;
+        opacity: .8;
+        span{
+            display: block;
+            margin: 10*$px 0 0 20*$px;}
+    }
+}

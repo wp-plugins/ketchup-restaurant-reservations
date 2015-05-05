@@ -1,0 +1,158 @@
+//Variables
+@import "partials/variables";
+
+//Mixins
+@import "partials/mixins";
+
+
+/*---------------------------------
+    BASE CSS
+----------------------------------*/
+
+.kechup_rr_make_reservation { 
+
+    .list {
+        background-color: $main-color;  
+        font-family: inherit;
+        font-size: $phi * $font-size * $px;
+
+        %both {            
+            font-weight: 500;
+            background: transparent;
+            background-color: $main_color;
+            border-radius: 0;
+        }
+
+        .ui-accordion-header {
+            color: inherit;
+            @extend %both;
+            @include border("#eeeeee", "solid", (1*$pxm)); 
+
+            &.ui-accordion-header-active, &.ui-state-hover {
+                color: $blue_royal;
+            }
+        }
+
+        .ui-accordion-content {            
+            @extend %both;
+        }
+    }
+
+}
+
+.kechup_rr_edit_reservation {
+    .cancel-reservation {
+        margin: 2em auto;
+        display: block;
+        background-color: darken($warning_button_color, 5);
+        
+        &:hover, &:active, &:focus {
+            background-color: $warning_button_color;
+        }
+    }
+}
+
+.restaurant-reservation-form {
+    padding: 5*$font_size*$phi*$px 10*$phi*$px;
+    overflow:hidden;
+
+    /*    [class^="part-"]:not(:first-child) {
+            display: none;
+        }*/
+
+    label.error {
+        color: red;
+        font-size: 80%;
+    }
+
+    fieldset {
+        display: block;
+        height: (7.5/$phi)*$font_size*$px;        
+        margin-bottom: 6*$pem; 
+
+        input,
+        select { 
+            display: block;
+            width: 100%;
+            height: 2.7*$pem;
+        }
+
+    }
+
+    .part-1 fieldset:not(:first-child) {
+        display: inline-block;
+        vertical-align: top;
+        min-width: 10*$pem;
+        margin-right: 0.865*$pem;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+}
+
+.select-table,
+#restaurant-interface {
+    width: 497.141*$bpx;
+    height: 355.094*$bpx; 
+}
+
+.select-table {
+    font-size: $font_size*$px;
+    margin: 0 auto;
+    padding: 20*$pxm 0 40*$pxm 0; 
+
+    &+fieldset {
+        margin-top: 40*$pxm;
+    }
+
+    #restaurant-interface {
+        position: relative;
+        background-color: $reservation_app_bgcolor;       
+        overflow: hidden;
+        background-size: 100%;
+        background-repeat: no-repeat;    
+
+
+    }
+
+    .table {
+        @include tablecover(6);
+
+        position: absolute;
+        display: block;
+        width: 75px;
+        height: 45px;        
+        border-radius: 4px;       
+        text-align: center;
+        font-size: 16px;
+        line-height: 45px;
+        font-weight: bold;
+        box-shadow: 2px 2px 3px #666;
+
+        &.selected-table {            
+            @include selected;
+        }
+
+        &.reserved-table {
+            @include reserved;
+        }
+
+        &.disabled{
+            @include tablecover(6,#dddddd,#777777); 
+        }
+    }
+}
+
+
+/*------------------------------------- 
+    HTML5 POLYFILLS
+-------------------------------------*/
+
+//time polyfill
+//@include timeElementSupport;
+
+//date polyfill
+//@include dateElementSupport;
+

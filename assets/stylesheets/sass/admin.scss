@@ -1,0 +1,413 @@
+/* 
+    Created on : 29 Jan 2015, 4:41:43 pm
+    Author     : Konstantinos Tsatsarounos  <konstantinos.tsatsarounos@gmail.com>
+*/
+
+//IMPORT MODULES FROM PARTIALS FOLDER
+
+//Variables
+@import "partials/variables";
+
+//Mixins
+@import "partials/mixins";
+
+
+/*----------------------------------
+    Admin Classes
+------------------------------------*/
+
+
+.plugin-settings-page-icon {
+    font-size: 3em;
+    margin: 0 .5em;
+}
+
+input.notification-placeholder {
+    @include border(darken($admin_page_bgcolor,10), "solid", (1*$px));
+    
+    &[readonly]{
+        background-color: lighten( $admin_page_bgcolor, 3 );
+        color: #666;
+    }
+}
+
+//display: inline-block; font-size: 3.5em; color: #492323; font-family: serif; text-rendering: optimizeLegibility;
+.kechup-rr-admin-page {
+    text-rendering: optimizeLegibility;
+    color: $redish_black;
+
+    .header {
+        display: inline-block;
+        font-size: $phi*$phi*1rem;        
+        font-family: 'Advent Pro', "Lucida Console", Monaco, monospace;
+        font-weight: 300;        
+        cursor: pointer;       
+    }
+    .plugin-settings-page-icon {
+        &:hover {
+            color: lighten($redish_black, 15);
+            cursor: pointer; 
+        }
+    }
+
+    .header-underline {
+        @include border(#000000, 'solid', (2*$px,0,0,0));
+        margin-left: -$admin_bar_padding*$px
+    }
+}
+
+form[name="create_booking"]{
+
+}
+div.box {  
+    position: relative;
+    background-color: lighten($admin_page_bgcolor,10);
+    display: inline-block;
+    padding: $phi*1rem;
+    margin-right: $phi*1rem;
+    margin-top: $phi*1rem;
+
+    height: $admin_box_height*$px;
+    width: 0.9*$admin_box_height*$px;
+    vertical-align: top;
+
+    @include border(darken($admin_page_bgcolor,10), "solid", (1*$px));
+
+    input, select {
+        display: block;
+        margin-bottom: $phi*0.6*1rem;
+        width: 0.84*$admin_box_height*$px;
+    }
+    button {
+        background-color: lighten($admin_page_bgcolor,10);
+        @include border(darken($admin_page_bgcolor,5), "solid", (1*$px));
+        cursor: pointer;
+
+        transition: color, background-color .2s ease-in-out;
+
+        &.save-booking { 
+            font-size: 35*$px;
+
+            &:hover {
+                color: darken($success_button_color,30);
+            }
+        }
+
+        &.upload-contacts {
+            width: 0.84*$admin_box_height*$px;
+            padding: ($phi/2)*1rem $phi*1rem;
+            font-size: $font_size*$phi*0.8*$px;
+
+            &:hover {
+                background-color: lighten($admin_page_bgcolor,3);
+            }
+        }
+
+    }
+
+    fieldset:last-child{
+        button.save-booking {
+            margin-left: ((0.84*$admin_box_height)-54+10)*$px;
+        }
+    }
+
+    &.mailchimp {
+        .loading {
+            position: absolute;
+            right: 10*$px;
+            top: 10*$px;
+            display: none;
+            color: $blue_royal;
+            font-size: $font_size*1.16*$px;
+
+            @include animate-icon;
+        }
+
+        & fieldset:last-child {
+            margin-top: 2rem;
+        }
+
+        button{
+            background-image: url(../images/mailchimp.png);
+            background-repeat: no-repeat;
+            background-position: 5% 50%;
+            background-size: 15%;
+        }
+
+    }
+}
+
+//Bookings List
+#list_bookings{
+    margin-top: $phi*$phi*1rem;   
+    align: center; 
+    width: 99%;
+    * { transition: background-color ease-in-out 200ms; }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        box-shadow: 0 0 1px 1px lighten($reservation_app_bgcolor,19%);
+        overflow: hidden;
+    }
+    thead{
+        th {            
+            &:active, &:focus, &:hover {
+                background-color: darken($admin_page_bgcolor,5);
+                border-bottom: 1px solid $light_blue;
+            }
+        }
+    }
+
+    tr {
+        background-color: lighten($admin_page_bgcolor,10);        
+    }
+
+
+    th { 
+        min-width: 10%;
+        color: #333333;
+        font-size: 0.9*$font_size*$px;
+        cursor: default;
+        white-space: nowrap;
+
+        line-height: $phi*$phi*$font_size*$px;
+    }
+
+
+    td {
+        width: 10%;
+        font-size: 0.8*$font_size*$px;        
+        line-height: $phi*$phi*$font_size*$px;
+
+        &:hover{
+            background-color: $admin_page_bgcolor;                      
+        }
+    }
+    tbody {
+        tr:nth-child(odd){
+            background-color: lighten($admin_page_bgcolor,3);
+        }        
+    }   
+
+    td:nth-child(1){
+        width: 13%;
+    }
+    td:nth-child(3){
+        width: 7%;
+    }
+    td:nth-child(8){
+        width: 13%;
+    }
+    td:nth-child(9){
+        width: 7%;
+    }
+
+    td.status button{
+        width: 30px;
+        height: 30px;
+        margin-right: 2*$px;
+        background-color: lighten($admin_page_bgcolor,10);
+        @include border(darken($admin_page_bgcolor,5), "solid", (1*$px));        
+
+        cursor: pointer; 
+    }
+    @include booking_buttons('td.status');
+}
+
+
+
+/*----------------------------------
+    Edit post / New post page
+------------------------------------*/
+
+div.add-working-day,
+div.add-exception,
+div.current-working-periods,
+div.current-working-periods-exceptions,
+div.kechup_rr_tables {
+    .warning-btn {        
+        @include button( $warning_button_color, $text-color: white );    
+    }
+
+    .success-btn {
+        @include button( $success_button_color, $text-color: white );
+    }
+}
+
+
+div.add-working-day,
+div.add-exception,
+div.current-working-periods,
+div.current-working-periods-exceptions {
+    @extend %common_meta_style;   
+}
+
+div.table-record,
+div.add-working-day,
+div.add-exception,
+div.current-working-periods,
+div.current-working-periods-exceptions {
+    button {
+        margin: 0 ($phi/3)*1rem!important;
+    }
+    button + button {
+        margin-left: 0!important;
+    } 
+}
+
+div.add-working-day,
+div.add-exception {
+    box-sizing: border-box;
+    min-width: 48.05%;
+}
+
+.table-record,
+.working-period,
+.working-period-exception {
+    margin-bottom: ($phi/3)*1rem;
+}
+
+div.current-working-periods,
+div.current-working-periods-exceptions {
+    display: block;      
+}
+
+
+.kechup_rr_tables {
+    @extend %common_meta_style;  
+    vertical-align: top;
+
+    &[id^="edit-tables-for-"]{
+        .table-id.used-table-in-layout {
+            background-color: #F2CECE;
+        }
+    }   
+
+    .table-id.selected {
+        @include selected;
+    }
+    
+    .widefat {
+        width: 200*$px;
+    }
+}
+.kechup_rr_tables.small{
+    width: 235*$px;
+}
+
+.kechup_rr_reservation_admin_app [id^="restaurant-interface-"],
+.kechup_rr_reservation_manual_insert {
+    width: $reservation_app_width*$px;
+    height: ($reservation_app_width/1.4)*$px;  
+}
+
+.kechup_rr_tables.small,
+[id^="manual-layout-interface-for-"] {
+    fieldset {
+        display: block;
+        margin-bottom: $phi*1rem!important;
+    }
+    input[type=number] {
+        display: block;
+    }    
+}
+
+[id^="manual-layout-interface-for-"] {
+    fieldset { display: inline-block; }    
+    margin-top: $phi*1rem;
+    button.layout-insert-table,
+    button.layout-delete-table,
+    button.layout-rotate-table{
+        margin-top: -8px;
+    }
+
+}
+
+.kechup_rr_reservation_admin_app {
+
+    [id^="restaurant-interface-"] {
+        position: relative;
+        background-color: $reservation_app_bgcolor;       
+        overflow: hidden;
+        background-size: 100%;
+        background-repeat: no-repeat;
+
+        .selected-table {            
+            @include selected;
+        }
+        
+        .table-counter {
+            background-color: rgba(0,0,0,.8);
+            width: $right_corner_button_width*$px;
+            height: $right_corner_button_width*$px;
+            color: #fff;
+            font-size: 0.30*$right_corner_button_width*$px;
+            text-align: center;
+            line-height: 0.74*$right_corner_button_width*$px;
+            text-indent: 0.1*$right_corner_button_width*$px;
+            position: absolute;
+            top: 7px;
+            right: 7px;            
+
+            border-radius: 0 0 0 50px;
+
+            -webkit-transition: background-color .3s ease-in-out;
+            transition: background-color .3s ease-in-out;
+
+            cursor: pointer;
+
+            &:hover{
+                background-color: rgba(0,0,0,.9);
+            }
+        }
+    }
+
+    .table {
+        @include tablecover(4);
+
+        position: absolute;
+        display: block;
+        width: 75px;
+        height: 45px;        
+        border-radius: 4px;       
+        text-align: center;
+        font-size: 16px;
+        line-height: 45px;
+        font-weight: bold;
+        box-shadow: 2px 2px 3px #666;
+    }
+}
+
+
+/*------------------------------------- 
+    Icon Overrides
+-------------------------------------*/
+
+
+
+#menu-posts-restaurant .wp-menu-image.dashicons-before.dashicons-admin-post:before {
+    font-family: 'restaurant';
+    content: "\e604";   
+}
+
+#toplevel_page_bookings .wp-menu-image.dashicons-before.dashicons-admin-generic:before {
+    font-family: 'ketchup_rr';
+    content: "\e670";
+}
+
+#menu-posts-notification .wp-menu-image.dashicons-before.dashicons-admin-post:before {
+    font-family: 'ketchup_rr';
+    content: "\e7d0";   
+}
+
+
+
+/*------------------------------------- 
+    HTML5 POLYFILLS
+-------------------------------------*/
+
+//time polyfill
+//@include timeElementSupport;
+
+//date polyfill
+//@include dateElementSupport;

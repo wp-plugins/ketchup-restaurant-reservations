@@ -1,0 +1,35 @@
+//Font Related Values
+$font_size: 14; //default wordpress font-size
+
+
+//UNITS
+$phi: 1.618;
+$bpx: 1px;
+$px: (1/$font_size)* 1rem;
+$pxm: (1/$font_size)* 1em;
+$pem: $font_size*$phi*$px;
+
+
+//ELEMENTS WIDTHS
+$admin_bar_padding: 20; //px
+$repeater_width: 380;
+$reservation_app_width: 435; //px
+$context_menu_witdh: 200; //px
+$right_corner_button_width: 35;
+$admin_box_height: 300;
+
+//BORDERS
+$table_border_radius: 5;
+
+
+//COLORS
+$main-color: #ffffff;
+$warning_button_color: #FC6868;
+$success_button_color: #2ecc70;
+$redish_black: #492323;
+$reservation_app_bgcolor: #bbbbbb;
+$context_menu_color: #fcfcfc;
+$blue_royal: #0f4c98;
+$table_color: #BD6D20;
+$admin_page_bgcolor: #f1f1f1;
+$light_blue: #5b9dd9;

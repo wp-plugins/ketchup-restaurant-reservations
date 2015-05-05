@@ -1,0 +1,377 @@
+# Copyright (C) 2013 KechupThemes
+# This file is distributed under the same license as the KechupThemes package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Kechup Restaurant Reservations\n"
+"POT-Creation-Date: 2015-04-03 16:47+0200\n"
+"PO-Revision-Date: 2015-04-04 02:05+0200\n"
+"Last-Translator: Konstantinos Tsatsarounos <konstantinos.tsatsarounos@gmail."
+"com>\n"
+"Language-Team: \n"
+"Language: el_GR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.4\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: app/admin/administration_page.php:19 app/admin/administration_page.php:26
+msgid "Restaurant Reservations"
+msgstr "Κρατήσεις Εστιατορίων"
+
+#: app/admin/administration_page.php:33
+msgid "Upload Contacts to MailChimp"
+msgstr "MailChimp"
+
+#: app/admin/administration_page.php:36
+msgid "Enter the API KEY"
+msgstr "Εισαγώγή API KEY"
+
+#: app/admin/administration_page.php:41
+msgid "Enter the list name"
+msgstr "Δώστε το όνομα της λίστας"
+
+#: app/admin/administration_page.php:42
+msgid "The mailchimp list you want to upload contacts"
+msgstr "Όνομα λίστας επαφών για μεταφόρτωση στο mailchimp"
+
+#: app/admin/administration_page.php:46 app/admin/bookings_page.php:58
+#: app/admin/bookings_page.php:156
+msgid "Restaurant Name"
+msgstr "Εστιατόριο"
+
+#: app/admin/administration_page.php:53
+msgid "Upload All"
+msgstr "Μεταφόρτωση όλων"
+
+#: app/admin/administration_page.php:70
+msgid "Upload Contacts"
+msgstr "Αποστολή Επαφών"
+
+#: app/admin/administration_page.php:75
+msgid "Tables Options"
+msgstr "Επιλογές Τραπεζιών"
+
+#: app/admin/administration_page.php:78
+msgid "Minimum number of persons"
+msgstr "Ελάχιστα άτομα ανα τραπέζι"
+
+#: app/admin/administration_page.php:83
+msgid "Table Available After"
+msgstr "Τραπέζι διαθέσιμο μετά από"
+
+#: app/admin/bookings_page.php:17 app/admin/bookings_page.php:24
+msgid "Bookings"
+msgstr "Κρατήσεις"
+
+#: app/admin/bookings_page.php:55
+msgid "Administrator Information"
+msgstr "Διαχείρηση"
+
+#: app/admin/bookings_page.php:82
+msgid "Reservation Status"
+msgstr "Κατάσταση"
+
+#: app/admin/bookings_page.php:84
+msgid "Pending"
+msgstr "Σε Αναμονή"
+
+#: app/admin/bookings_page.php:85
+msgid "Rejected"
+msgstr "Ακυρωμένο"
+
+#: app/admin/bookings_page.php:86
+msgid "Confirmed"
+msgstr "Επιβεβαιωμένο"
+
+#: app/admin/bookings_page.php:91 app/admin/bookings_page.php:163
+#: app/admin/templates/RestaurantMetaTemplates.php:166
+msgid "Table ID"
+msgstr "Αναγνωριστικό"
+
+#: app/admin/bookings_page.php:101
+msgid "Reservation Information"
+msgstr "Πληροφορίες κράτησης"
+
+#: app/admin/bookings_page.php:104 app/admin/bookings_page.php:158
+msgid "Starting Time"
+msgstr "Ώρα έναρξης"
+
+#: app/admin/bookings_page.php:109 app/admin/bookings_page.php:159
+msgid "Ending Time"
+msgstr "Ώρα λήξης"
+
+#: app/admin/bookings_page.php:114 app/admin/bookings_page.php:160
+msgid "Date"
+msgstr "Ημερομηνία"
+
+#: app/admin/bookings_page.php:119 app/admin/bookings_page.php:157
+msgid "Persons Number"
+msgstr "Αρ. Ατόμων"
+
+#: app/admin/bookings_page.php:127
+msgid "Contact Information"
+msgstr "Στοιχεία επαφής"
+
+#: app/admin/bookings_page.php:130 app/admin/bookings_page.php:155
+msgid "Reservation Name"
+msgstr "Κράτηση στο όνομα"
+
+#: app/admin/bookings_page.php:135 app/admin/bookings_page.php:162
+#: app/library/modules/RestaurantMeta.php:54
+msgid "Phone Number"
+msgstr "Τηλέφωνο"
+
+#: app/admin/bookings_page.php:140 app/admin/bookings_page.php:161
+#: app/app.php:224 app/library/modules/RestaurantMeta.php:55
+msgid "Email"
+msgstr ""
+
+#: app/admin/bookings_page.php:145
+msgid "Save"
+msgstr "Αποθήκευση"
+
+#: app/admin/bookings_page.php:164
+msgid "Status"
+msgstr "Κατάσταση"
+
+#: app/admin/templates/RestaurantMetaTemplates.php:18
+msgid "Add Working Period"
+msgstr "Προσθήκη Ημέρας Εργασίας"
+
+#: app/admin/templates/RestaurantMetaTemplates.php:39 app/app.php:331
+msgid "Sunday"
+msgstr "Κυριακή"
+
+#: app/admin/templates/RestaurantMetaTemplates.php:39 app/app.php:332
+msgid "Monday"
+msgstr "Δευτέρα"
+
+#: app/admin/templates/RestaurantMetaTemplates.php:39 app/app.php:333
+msgid "Tuesday"
+msgstr "Τρίτη"
+
+#: app/admin/templates/RestaurantMetaTemplates.php:39 app/app.php:334
+msgid "Wednesday"
+msgstr "Τετάρτη"
+
+#: app/admin/templates/RestaurantMetaTemplates.php:39 app/app.php:335
+msgid "Thursday"
+msgstr "Πέμπτη"
+
+#: app/admin/templates/RestaurantMetaTemplates.php:39 app/app.php:336
+msgid "Friday"
+msgstr "Παρασκευή"
+
+#: app/admin/templates/RestaurantMetaTemplates.php:39 app/app.php:337
+msgid "Saturday"
+msgstr "Σάββατο"
+
+#: app/admin/templates/RestaurantMetaTemplates.php:39
+msgid "Add"
+msgstr "Προσθήκη"
+
+#: app/admin/templates/RestaurantMetaTemplates.php:47
+#: app/admin/templates/RestaurantMetaTemplates.php:57
+msgid "Create Exception"
+msgstr "Προσθήκη Εξαίρεσης"
+
+#: app/admin/templates/RestaurantMetaTemplates.php:71
+#: app/admin/templates/RestaurantMetaTemplates.php:119
+msgid "Update"
+msgstr "Διόρθωση"
+
+#: app/admin/templates/RestaurantMetaTemplates.php:72
+#: app/admin/templates/RestaurantMetaTemplates.php:120
+msgid "Delete"
+msgstr "Διαγραφή"
+
+#: app/admin/templates/RestaurantMetaTemplates.php:73
+msgid "Current Working Periods"
+msgstr "Περιόδοι Εργασίας"
+
+#: app/admin/templates/RestaurantMetaTemplates.php:121
+msgid "Current Exceptions"
+msgstr "Εξαιρέσεις"
+
+#: app/admin/templates/RestaurantMetaTemplates.php:165
+msgid "Insert Table"
+msgstr "Εισαγωγή τραπεζιού"
+
+#: app/admin/templates/RestaurantMetaTemplates.php:167
+msgid "Table Capacity"
+msgstr "Διαθεσιμότητα ατόμων"
+
+#: app/admin/templates/RestaurantMetaTemplates.php:202
+msgid "Number of Tables"
+msgstr "Αριθμός τραπεζιών"
+
+#: app/admin/templates/RestaurantMetaTemplates.php:203
+msgid "Persons per Table"
+msgstr "Άτομα ανα τραπέζι"
+
+#: app/admin/templates/RestaurantMetaTemplates.php:204
+msgid "Minimum Persons per Table"
+msgstr "Ελάχιστα άτομα ανα τραπέζι"
+
+#: app/admin/templates/RestaurantMetaTemplates.php:205
+msgid "Add Tables"
+msgstr "Πρόσθεσε τραπέζια"
+
+#: app/admin/templates/RestaurantMetaTemplates.php:247
+msgid "Edit Tables"
+msgstr "Διόρθωση τραπεζιών"
+
+#: app/admin/templates/RestaurantMetaTemplates.php:248
+msgid "Update Table"
+msgstr "Διόρθωση"
+
+#: app/admin/templates/RestaurantMetaTemplates.php:249
+msgid "Delete Table"
+msgstr "Διαγραφή"
+
+#: app/app.php:127 app/app.php:140
+msgid "Restaurant"
+msgstr "Εστιατόριο"
+
+#: app/app.php:128
+msgid "Parent Restaurant:"
+msgstr "Γονικό εστιατόριο"
+
+#: app/app.php:129
+msgid "All restaurants"
+msgstr "Όλα τα εστιατόρια"
+
+#: app/app.php:130
+msgid "View Restaurant"
+msgstr "Επισκόπηση εστιατορίου"
+
+#: app/app.php:131
+msgid "Add New Restaurant"
+msgstr "Προσθήκη νέου εστιατορίου"
+
+#: app/app.php:132 app/app.php:172
+msgid "Add  New"
+msgstr "Προσθήκη Νέου"
+
+#: app/app.php:133
+msgid "Edit Restaurant"
+msgstr "Διόρθωση εστιατορίου"
+
+#: app/app.php:134
+msgid "Update Restaurant"
+msgstr "Ενημέρωση εστιατορίου"
+
+#: app/app.php:135
+msgid "Search Restaurant"
+msgstr "Αναζήτηση εστιατορίου"
+
+#: app/app.php:136 app/app.php:176
+msgid "Not found"
+msgstr "Δε βρέθηκε"
+
+#: app/app.php:137 app/app.php:177
+msgid "Not found in Trash"
+msgstr "Δε βρέθηκε στα διεγραμμένα"
+
+#: app/app.php:141
+msgid "A restaurant registry"
+msgstr "Λίστα εστιατορίων"
+
+#: app/app.php:167 app/app.php:180
+msgid "Notification"
+msgstr "Ειδοποιηση"
+
+#: app/app.php:168
+msgid "Parent Notification:"
+msgstr "Γονική ειδοποίηση"
+
+#: app/app.php:169
+msgid "All Notifications"
+msgstr "Όλες οι ειδοποιήσεις"
+
+#: app/app.php:170
+msgid "View Notification"
+msgstr "Επισκόπηση Ειδοποιησης"
+
+#: app/app.php:171
+msgid "Add New Notification"
+msgstr "Προσθήκη Ειδοποίησης"
+
+#: app/app.php:173
+msgid "Edit Notification"
+msgstr "Δίορθωση Ειδοποίησης"
+
+#: app/app.php:174
+msgid "Update Notification"
+msgstr "Ενημέρωση Ειδοποίησης"
+
+#: app/app.php:175
+msgid "Search Notification"
+msgstr "Αναζήτηση Ειδόποιησης"
+
+#: app/app.php:181
+msgid "A notifications registry"
+msgstr "Λίστα Ειδοποιήσεων"
+
+#: app/app.php:222 app/library/modules/RestaurantMeta.php:50
+msgid "Address"
+msgstr "Διεύθυνση"
+
+#: app/app.php:223
+msgid "Phone"
+msgstr "Τηλέφωνο"
+
+#: app/app.php:227
+msgid "Assigned To"
+msgstr "Για το"
+
+#: app/app.php:483 app/app.php:499
+msgid "Not allowed Action"
+msgstr "Μη επιτρεπόμενη ενέργεια"
+
+#: app/front/shortcodes/make_reservation.php:17
+msgid "Make Reservation"
+msgstr "Κάνε κράτηση"
+
+#: app/library/modules/NotificationMeta.php:38
+msgid "Notification Template"
+msgstr "Πρότυπο ειδοποίησης"
+
+#: app/library/modules/NotificationMeta.php:39
+msgid "Assign to Restaurant"
+msgstr "Ανάθεση στο εστιατόριο"
+
+#: app/library/modules/RestaurantMeta.php:51
+msgid "Country"
+msgstr "Χώρα"
+
+#: app/library/modules/RestaurantMeta.php:52
+msgid "City"
+msgstr "Πόλη"
+
+#: app/library/modules/RestaurantMeta.php:53
+msgid "Postal Code"
+msgstr "Ταχ. κώδικας"
+
+#: app/library/modules/RestaurantMeta.php:56
+msgid "Time Zone"
+msgstr "Ζώνη ώρας"
+
+#: app/library/modules/RestaurantMeta.php:57
+msgid "Date Format"
+msgstr "Μορφή ημερομηνίας"
+
+#: app/library/modules/RestaurantMeta.php:58
+msgid "Reservation Default Duration (Minutes)"
+msgstr "Προεπιλεγμένη διάρκεια κράτησης"
+
+#: app/library/modules/RestaurantMeta.php:62
+msgid "Working Periods"
+msgstr "Ώρες εργασίας"
+
+#: app/library/modules/RestaurantMeta.php:63
+msgid "Tables"
+msgstr "Τραπέζια"
