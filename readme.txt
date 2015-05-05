@@ -4,7 +4,7 @@ Contributors: konstantinos_tsatsarounos
 Tags: restaurants, booking, restaurant-booking spam
 Requires at least: 4.0
 Tested up to: 4.2.1
-Stable tag: trunk
+Stable tag: 1.0 trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
