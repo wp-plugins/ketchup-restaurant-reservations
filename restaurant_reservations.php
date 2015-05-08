@@ -2,7 +2,7 @@
 /*
   Plugin Name: Ketchup Restaurant Reservations
   Plugin URI: http://ketchupthemes.com/restaurant-reservation-plugin/
-  Description: Your one stop destination to professional WordPress restaurant reservation systems! The ideal Restaurant Reservations plugin for small, medium and big restaurants!
+  Description: Your one stop destination to professional WordPress restaurant reservation systems! It is the ideal for small and big restaurants!
   Author: Alex Itsios
   Version: 1.0.0
   Author URI: http://ketchupthemes.com/alex-itsios
